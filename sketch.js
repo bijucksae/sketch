@@ -39,4 +39,16 @@ function draw() {
     fill(139, 69, 19);
     rect(stick.x - 5, height - stick.height, 10, stick.height);
   }
+  if (fireworkCount === maxFireworks) {
+    stroke(255);
+    noFill();
+    beginShape();
+    for (let i = 0; i < sticks.length; i++) {
+      let stick = sticks[i];
+      let x = stick.x;
+      let y = height - stick.height;
+      vertex(x, y);
+    }
+    endShape();
+  }
 }
