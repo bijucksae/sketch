@@ -36,5 +36,7 @@ function draw() {
     if (!stick.isFalling && stick.height < stick.targetHeight) {
       stick.height += 2; 
     }
+    fill(139, 69, 19);
+    rect(stick.x - 5, height - stick.height, 10, stick.height);
   }
 }
