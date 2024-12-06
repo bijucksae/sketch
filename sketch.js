@@ -30,4 +30,11 @@ function draw() {
     sticks.push(new Stick(fw.pos.x, height));
     fireworkCount++;
   }
+
+  for (let i = 0; i < sticks.length; i++) {
+    let stick = sticks[i];
+    if (!stick.isFalling && stick.height < stick.targetHeight) {
+      stick.height += 2; 
+    }
+  }
 }
