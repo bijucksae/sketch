@@ -52,3 +52,9 @@ function draw() {
     endShape();
   }
 }
+
+function mousePressed() {
+  fireworks = [];
+  sticks = [];
+  fireworkCount = 0;
+}
