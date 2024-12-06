@@ -2,6 +2,7 @@ let fireworks = [];
 let fireworkCount = 0;
 let maxFireworks = 5;
 let fireworkSpacing;
+let sticks = []; 
 
 function setup() {
   createCanvas(800, 600);
@@ -25,6 +26,8 @@ function draw() {
   if (fireworkCount < maxFireworks && frameCount % 60 === 0) {
     let fireworkPosX = fireworkSpacing * fireworkCount + fireworkSpacing / 2; // 각 불꽃의 x 위치 계산
     fireworks.push(new Firework(fireworkPosX));
+    let fw = fireworks[fireworks.length - 1];
+    sticks.push(new Stick(fw.pos.x, height));
     fireworkCount++;
   }
 }
